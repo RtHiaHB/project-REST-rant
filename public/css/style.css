@@ -8,3 +8,9 @@ h1 {
     display:block;
     margin:auto;
 }
+
+.placesImgs {
+    display:block;
+    width: 800px;
+    margin:auto;
+}
