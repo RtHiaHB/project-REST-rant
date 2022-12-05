@@ -21,7 +21,15 @@ router.get('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-    res.send(`Edit STUB ${places[req.params.id].name}`)
+    let id=Number(req.params.id)
+    if(isNaN(id)) {
+        res.render('error404')
+    } else if (!places[id]) {
+        res.render('error404')
+    } else {
+        
+        res.render('places/edit', { place: places[id], id })
+    }
 })
 
 router.post('/', (req, res) => {
@@ -47,6 +55,28 @@ router.delete('/:id', (req, res) => {
     } else {
         places.splice(id, 1)
         res.redirect('/places')
+    }
+})
+
+router.put('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if(isNaN(id)) {
+        res.render('error404')
+    } else if(!places[id]) {
+        res.render('error404')
+    } else {
+        if(!req.body.pic) {
+            req.body.pic = 'http://placekitten.com/400/400'
+        }
+        if(!req.body.city) {
+            req.body.city = 'Anytown'
+        }
+        if(!req.body.state) {
+            req.body.state = 'USA'
+        }
+        //Save the new data into places[id]
+        places[id] = req.body
+        res.redirect(`/places/${id}`)
     }
 })
 
