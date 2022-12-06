@@ -15,7 +15,7 @@ function Show(data) {
                     </div>
                     <div className='item-place-desc'>
                         <h2>Description</h2>
-                        <p> Location in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
+                        <p> Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
                     </div>
                     <div className='item-place-buttons'>
                         <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
