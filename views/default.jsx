@@ -1,6 +1,7 @@
 const React = require('react')
 
 function Def (html) {
+
     return (
         <html>
             <head>
@@ -9,7 +10,7 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
-                <nav>
+                <nav className='navbar fixed-top navbar-dark'>
                     <ul>
                         <li>
                             <a href="/">Home</a>
@@ -24,6 +25,9 @@ function Def (html) {
                 </nav>
                 {html.children}
             </body>
+            <footer>
+                REST-rant &copy; 2022-{new Date().getFullYear().toString()} Thomas Davidson Enterprises, LLC.  All rights reserved.
+            </footer>
         </html>
     )
 }

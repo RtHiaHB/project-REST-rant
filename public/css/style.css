@@ -4,7 +4,7 @@ h1 {
 }
 
 body {
-    background-color: lightblue;
+    background-color: #197070;
     text-align: center;
 }
 
@@ -27,7 +27,7 @@ main {
 }
 
 nav {
-    background-color: cornflowerblue;
+    background-color: midnightblue;
     padding: 10px;
 }
 
@@ -44,4 +44,51 @@ nav li {
 nav a {
     color: white;
     font-size: 1.5em;
+}
+
+footer {
+    position: sticky;
+    background-color: midnightblue;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    column-width: 50%;
+    margin-top: 60px;
+}
+.item-place-name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item-place-rating {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.item-place-desc {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.item-place-buttons {
+    display: flex;
+    flex-flow: row;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 4;
+    margin:auto;
+}
+
+.item-place-comments {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-top:1px solid gray;
+}
+
+.item-place-img {
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
