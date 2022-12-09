@@ -23,6 +23,7 @@ main {
 .placesImgs {
     display:block;
     width: 800px;
+    max-width: 60%;
     margin:auto;
 }
 
