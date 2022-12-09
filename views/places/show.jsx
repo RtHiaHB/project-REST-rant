@@ -28,7 +28,7 @@ function Show(data) {
                         </form>
                     </div>
                     <div className='item-place-img'>
-                        <img src={data.place.pic} />
+                        <img src={data.place.pic} className='item-place-img-img' />
                     </div>
                     <div className='item-place-comments'>
                         <h2>Comments</h2>

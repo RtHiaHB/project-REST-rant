@@ -34,7 +34,7 @@ nav {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
 }
 
 nav li {
@@ -92,4 +92,11 @@ footer {
 .item-place-img {
     grid-row-start: 2;
     grid-row-end: 4;
+    grid-column: 1;
+}
+
+.item-place-img-img {
+    max-width: 100%;
+    display: block;
+    margin:auto;
 }
