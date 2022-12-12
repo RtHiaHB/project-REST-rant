@@ -13,8 +13,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const { pic } = req.body
-    if(!pic) req.body.pic = '/images/pablo-pacheco-pizza.jpg'
     db.Place.create(req.body)
         .then(() => {
             res.redirect('/places')

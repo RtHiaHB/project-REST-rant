@@ -19,14 +19,14 @@ db.Place.create([{
     city: 'New York City',
     state: 'NY',
     cuisines: 'Greek, American',
-    pic: 'https://images.unsplash.com/photo-1562631320-c61a49d420ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    pic: 'https://images.unsplash.com/photo-1562631320-c61a49d420ba',
     founded: 2021
 }, {
     name: 'Tom\'s Pizza and Crematorium',
     city: 'Four Oaks',
     state: 'NC',
     cuisines: 'Pizza, Human flesh',
-    pic: 'https://images.unsplash.com/photo-1579751626657-72bc17010498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+    pic: 'https://images.unsplash.com/photo-1579751626657-72bc17010498',
     founded: 2022
 }])
 .then(() => {
