@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const db = require('../models')
+const db = require('../models/index')
 
 router.get('/', (req, res) => {
     db.Place.find()
@@ -42,8 +42,12 @@ router.get('/:id', (req, res) => {
         })
 })
 
-router.put('/:id', (req, res) => {
-    res.send('PUT /places/:id stub')
+router.put('/:id', async (req, res) => {
+    //res.send('PUT /places/:id stub')
+    const { id } = req.params
+    await db.Place.findByIdAndUpdate(id, req.body)
+    res.redirect(`/places/${id}`)
+
 })
 
 router.delete('/:id', (req, res) => {

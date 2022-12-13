@@ -2,11 +2,12 @@ const React = require('react')
 const Def = require('../default.jsx')
 
 function Edit_Form(data) {
+    let id = String(data.place._id)
     return (
         <Def>
             <main>
                 <h1>Edit Place</h1>
-                <form method='POST' action={`/places/${data.id}?_method=PUT`}>
+                <form method='POST' action={`/places/${id}?_method=PUT`}>
                     <div className='form-group'>
                         <label htmlFor='name'>Place Name </label>
                         <input className='form-control' id='name' name='name' defaultValue={data.place.name} required />
