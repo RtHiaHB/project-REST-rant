@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+    let { pic, city, state } = req.body
+    if(!pic) req.body.pic = undefined
+    if(!city) req.body.city = undefined
+    if(!state) req.body.state = undefined
     db.Place.create(req.body)
         .then(() => {
             res.redirect('/places')
@@ -47,7 +51,15 @@ router.delete('/:id', (req, res) => {
 })
 
 router.get('/:id/edit', (req, res) => {
-    res.send('GET edit form stub')
+    //res.send('GET edit form stub')
+    db.Place.findById(req.params.id)
+        .then(place => {
+            res.render('places/edit', { place })
+        })
+        .catch(err => {
+            console.log('err', err)
+            res.render('error404')
+        })
 })
 
 router.post('/:id/rant', (req, res) => {

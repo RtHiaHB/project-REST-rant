@@ -4,7 +4,9 @@
   "description": "REST-Rant is an app where users can review restaurants.",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon index.js"
+    "dev": "npx nodemon index.js",
+    "seed": "node ./seeders/seed-places.js",
+    "del": "node ./seeders/delete-places.js"
   },
   "repository": {
     "type": "git",
