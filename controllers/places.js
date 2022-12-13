@@ -43,7 +43,6 @@ router.get('/:id', (req, res) => {
 })
 
 router.put('/:id', async (req, res) => {
-    //res.send('PUT /places/:id stub')
     const { id } = req.params
     await db.Place.findByIdAndUpdate(id, req.body)
     res.redirect(`/places/${id}`)
@@ -51,7 +50,15 @@ router.put('/:id', async (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    res.send('DELETE /places/:id stub')
+    const { id } = req.params
+    db.Place.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/places')
+        })
+        .catch((err) => {
+            console.log("Error!", err)
+        })
+    //res.send('DELETE /places/:id stub')
 })
 
 router.get('/:id/edit', (req, res) => {
