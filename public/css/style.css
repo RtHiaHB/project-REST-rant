@@ -100,3 +100,7 @@ footer {
     display: block;
     margin:auto;
 }
+
+.comment-header {
+    margin-top: 60px;
+}
