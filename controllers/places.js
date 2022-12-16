@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const db = require('../models/index')
+
 router.get('/', (req, res) => {
     db.Place.find()
         .then((places) => {
@@ -10,6 +11,7 @@ router.get('/', (req, res) => {
             res.render('error404')
         })
 })
+
 router.post('/:id/rant', (req, res) => {
     req.body.rant = req.body.rant ? true : false
     db.Place.findById(req.params.id)
@@ -67,8 +69,13 @@ router.get('/:id', (req, res) => {
 router.put('/:id', async (req, res) => {
     const { id } = req.params
     await db.Place.findByIdAndUpdate(id, req.body)
-    res.redirect(`/places/${id}`)
-
+        .then(()=>{
+            res.redirect(`/places/${id}`)
+        })
+        .catch(err => {
+            console.log('PUT error!', err)
+            res.render('error404')
+        })
 })
 
 router.delete('/:id', (req, res) => {

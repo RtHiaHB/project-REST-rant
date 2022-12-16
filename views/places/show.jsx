@@ -29,7 +29,7 @@ function Show(data) {
 
         rating = (
             <h3>
-                {stars} stars
+                {stars}
             </h3>
         )
         comments = data.place.comments.map(c => {
