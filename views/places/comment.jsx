@@ -17,11 +17,26 @@ function Comment(place) {
                     </div>
                     <div className='form-group'>
                         <label htmlFor='stars'>Star Rating</label>
-                        <input type='number' step='0.5' className='form-control' id='stars' name='stars' min='0' max='5' defaultValue={2.5} />
+                        <input type='range' step='0.5' className='form-range' id='stars' name='stars' min='0' max='5' value={2.5} />
+                        <table width="100%">
+                            <tr>
+                                <td className='slider-0'>0</td>
+                                <td className='slider-1'>0.5</td>
+                                <td className='slider-2'>1.0</td>
+                                <td className='slider-2'>1.5</td>
+                                <td className='slider-2'>2.0</td>
+                                <td className='slider-2'>2.5</td>
+                                <td className='slider-2'>3.0</td>
+                                <td className='slider-2'>3.5</td>
+                                <td className='slider-2'>4.0</td>
+                                <td className='slider-2'>4.5</td>
+                                <td className='slider-2'>5.0</td>
+                            </tr>
+                        </table>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='content'>Comment:</label>
-                        <input type='text' className='form-control' id='content' name='content' />
+                        <textarea  className='form-control' id='content' name='content' />
                     </div>
                     <input type='submit' className='btn btn-primary' value='Add Rant' />
                 </form>

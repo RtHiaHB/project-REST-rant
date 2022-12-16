@@ -104,3 +104,17 @@ footer {
 .comment-header {
     margin-top: 60px;
 }
+
+.slider-0 {
+    text-align:left;
+    width: 5%;
+}
+.slider-1 {
+    text-align: right;
+    width: 5%
+}
+
+.slider-2 {
+    text-align: right;
+    width: 9.1%;
+}
