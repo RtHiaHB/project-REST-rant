@@ -7,7 +7,8 @@
     "dev": "npx nodemon index.js",
     "seed": "node ./seeders/seed-places.js",
     "del": "node ./seeders/delete-places.js",
-    "com": "node ./seeders/seed-comments"
+    "com": "node ./seeders/seed-comments.js",
+    "places": "node ./seeders/seed-places.js"
   },
   "repository": {
     "type": "git",
