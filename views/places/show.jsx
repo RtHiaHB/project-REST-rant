@@ -41,6 +41,11 @@ function Show(data) {
                         <strong>- {c.author} </strong>
                     </h3>
                     <h4>Rating: {c.stars}</h4>
+                    <form method='POST' action={`/places/${data.place._id}/rant/${c._id}?_method=DELETE`}>
+                        <button type='submit' className='btn btn-danger'>
+                            Delete rant
+                        </button>
+                    </form>
                 </div>
             )
         })

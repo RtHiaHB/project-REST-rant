@@ -119,7 +119,18 @@ router.get('/:id/rant', (req, res) => {
 
 
 router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId stub')
+    const { id, rantId } = req.params
+    console.log(id)
+    let redir = `places/${id}`
+    console.log(redir)
+    db.Comment.findByIdAndDelete(rantId)
+        .then(() => {
+            res.redirect(`/places/${id}`)
+        })
+        .catch((err) => {
+            console.log("error in router delete by rantId", err)
+            res.render('error404')
+        })
 })
 
 module.exports = router
