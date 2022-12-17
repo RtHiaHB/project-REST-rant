@@ -78,8 +78,14 @@ router.put('/:id', async (req, res) => {
         })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     const { id } = req.params
+    place = await db.Place.findById(id)
+    if(place.comments.length != 0) {
+        for(let i = 0; i < place.comments.length; i++) {
+            await db.Comment.findByIdAndDelete(place.comments[i])
+        }
+    }
     db.Place.findByIdAndDelete(id)
         .then(() => {
             res.redirect('/places')
