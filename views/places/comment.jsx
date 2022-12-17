@@ -17,8 +17,8 @@ function Comment(place) {
                     </div>
                     <div className='form-group'>
                         <label htmlFor='stars'>Star Rating</label>
-                        <input type='range' step='0.5' className='form-range' id='stars' name='stars' min='0' max='5' value={2.5} />
-                        <table width="100%">
+                        <input type='range' className='slider-main' step='0.5' id='stars' name='stars' min='0' max='5' value={2.5} />
+                        <table width="100%" className='slider-table'>
                             <tr>
                                 <td className='slider-0'>0</td>
                                 <td className='slider-1'>0.5</td>

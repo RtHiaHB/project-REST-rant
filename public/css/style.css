@@ -105,16 +105,28 @@ footer {
     margin-top: 60px;
 }
 
+.slider-table {
+    width: 92.31%;
+    margin-left: 3.85%;
+    margin-right: 3.85%;
+}
+
 .slider-0 {
     text-align:left;
     width: 5%;
 }
 .slider-1 {
     text-align: right;
-    width: 5%
+    width: 5.5%
 }
 
 .slider-2 {
     text-align: right;
-    width: 9.1%;
+    width: 9.15%;
+}
+
+.slider-main {
+    width: 92.31%;
+    display:block;
+    margin:auto;
 }
