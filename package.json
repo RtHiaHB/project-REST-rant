@@ -11,6 +11,9 @@
     "com": "node ./seeders/seed-comments.js",
     "places": "node ./seeders/seed-places.js"
   },
+  "engines": {
+    "node": "18.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RtHiaHB/project-REST-rant.git"
