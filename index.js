@@ -1,8 +1,10 @@
-// Modules and globules
+// Modules and globals
 require('dotenv').config();
 const express = require('express');
 const methodOverride = require('method-override')
-const app = express();
+const app = express()
+const mongoose = require('mongoose')
+const { PORT } = process.env
 
 //Express stuffs
 app.set('views', __dirname + '/views')
@@ -15,7 +17,6 @@ app.use(methodOverride('_method'))
 // Controllers and Routes
 app.use('/places', require('./controllers/places'))
 
-const { PORT } = process.env
 app.get('/', (req, res) => {
     res.render('home')
 });
@@ -23,6 +24,11 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.render('error404')
 })
+
+//database connection
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('DB connected'))
+    .catch(err => { console.error(err)})
 
 // Listen for connections
 app.listen(PORT, () => {
