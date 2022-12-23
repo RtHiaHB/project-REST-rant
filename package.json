@@ -10,8 +10,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^6.8.1",
     "nvm": "^0.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   },
   "scripts": {
     "start": "node index.js"
