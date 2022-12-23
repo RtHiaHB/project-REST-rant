@@ -2,7 +2,6 @@ const React = require('react')
 const Def = require('./default')
 
 function Home() {
-    console.log('Hello from the Home Page')
     return (
         <Def>
             <main>
