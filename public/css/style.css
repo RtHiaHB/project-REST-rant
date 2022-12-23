@@ -1,0 +1,132 @@
+h1 {
+    text-align: center;
+    color:cornflowerblue;
+}
+
+body {
+    background-color: #197070;
+    text-align: center;
+}
+
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.homeImg {
+    width: 15%;
+    display:block;
+    margin:auto;
+}
+
+.placesImgs {
+    display:block;
+    width: 800px;
+    max-width: 60%;
+    margin:auto;
+}
+
+nav {
+    background-color: midnightblue;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.5em;
+}
+
+footer {
+    position: sticky;
+    background-color: midnightblue;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    column-width: 50%;
+    margin-top: 60px;
+}
+.item-place-name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item-place-rating {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.item-place-desc {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.item-place-buttons {
+    display: flex;
+    flex-flow: row;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 4;
+    margin:auto;
+}
+
+.item-place-comments {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-top:1px solid gray;
+}
+
+.item-place-img {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column: 1;
+}
+
+.item-place-img-img {
+    max-width: 100%;
+    display: block;
+    margin:auto;
+}
+
+.comment-header {
+    margin-top: 60px;
+}
+
+.slider-table {
+    width: 92.31%;
+    margin-left: 3.85%;
+    margin-right: 3.85%;
+}
+
+.slider-0 {
+    text-align:left;
+    width: 5%;
+}
+.slider-1 {
+    text-align: right;
+    width: 5.5%
+}
+
+.slider-2 {
+    text-align: right;
+    width: 9.15%;
+}
+
+.slider-main {
+    width: 92.31%;
+    display:block;
+    margin:auto;
+}
