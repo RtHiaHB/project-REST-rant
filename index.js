@@ -18,8 +18,8 @@ app.use(methodOverride('_method'))
 //app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
-    //res.render('home')
-    res.send("Hello, John")
+    res.render('home')
+    //res.send("Hello, John")
 })
 
 app.get('*', (req, res) => {
